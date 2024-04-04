@@ -67,3 +67,6 @@ ggplot(drug.consumption.melt, aes(x = Var1, y = Var2, fill = value)) +
         panel.grid.minor = element_line(linetype = "blank"), 
         axis.text.x = element_text(angle = 90, hjust = 1)) +
     coord_fixed()
+
+ggsave("drug_consumption_correlation_2016.pdf")
+ggsave("drug_consumption_correlation_2016.png")
