@@ -62,7 +62,7 @@ ggplot(drug.consumption.melt, aes(x = Var1, y = Var2, fill = value)) +
         plot.margin = unit(c(0,1,0,1), "cm"), 
         plot.caption = element_text(margin = margin(t = 30)),
         plot.title = element_text(hjust = 0.5), 
-        axis.title = element_blank()
+        axis.title = element_blank(),
         panel.grid.major = element_line(linetype = "dashed"), 
         panel.grid.minor = element_line(linetype = "blank"), 
         axis.text.x = element_text(angle = 90, hjust = 1)) +
