@@ -1,4 +1,4 @@
-# drug_consumption_2016_r
+# drug_consumption_2016
 This is a plot of drug usage correlation data taken from a 2016 study[[1]](#1), created in R.
 
 ## References
