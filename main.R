@@ -5,7 +5,7 @@ library(reshape2)
 
 drug.consumption = read.csv("./drug_consumption.csv", header = TRUE)
 
-drug.list = c(
+drug.list <- c(
     "Alcohol",
     "Amphet",
     "Amyl",
@@ -31,7 +31,7 @@ clx.to.x = function(clx) {
     as.numeric(sub("^CL", "", clx))
 }
 
-drug.consumption = sapply(drug.consumption[,drug.list], clx.to.x)
+drug.consumption <- sapply(drug.consumption[,drug.list], clx.to.x)
 
 remove.upper.tri = function(cor.matrix) {
     cor.matrix[upper.tri(cor.matrix)] <- NA
@@ -45,9 +45,9 @@ reorder = function(cor.matrix) {
     cor.matrix[hc$order, hc$order]
 }
 
-drug.consumption.cor = cor(drug.consumption) %>% reorder() %>% remove.upper.tri()
+drug.consumption.cor <- cor(drug.consumption) %>% reorder() %>% remove.upper.tri()
 
-drug.consumption.melt = melt(drug.consumption.cor, na.rm = TRUE)
+drug.consumption.melt <- melt(drug.consumption.cor, na.rm = TRUE)
 
 caption <- "http://archive.ics.uci.edu/dataset/373/drug+consumption+quantified"
 
