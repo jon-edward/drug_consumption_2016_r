@@ -1,6 +1,8 @@
 # drug_consumption_2016
 This is a plot of drug usage correlation data taken from a 2016 study[[1]](#1), created in R.
 
+![Drug usage correlation graph](./drug_consumption_correlation_2016.png)
+
 ## References
 <a id="1">[1]</a> 
 Fehrman,Elaine, Egan,Vincent, and Mirkes,Evgeny. (2016). 
