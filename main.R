@@ -52,18 +52,18 @@ drug.consumption.melt = melt(drug.consumption.cor, na.rm = TRUE)
 caption <- "http://archive.ics.uci.edu/dataset/373/drug+consumption+quantified"
 
 ggplot(drug.consumption.melt, aes(x = Var1, y = Var2, fill = value)) +
-geom_tile() +
-geom_text(aes(label = round(value, 2)), color = "black", size = 2) +
-scale_fill_gradient(low = "white", high = "steelblue") + 
-labs(x = "Drug", y = "Drug", fill = "Pearson\nCorrelation") +
-labs(caption = caption) +
-ggtitle("Correlation Between Drug Consumption") +
-theme(
-    plot.margin = unit(c(0,1,0,1), "cm"), 
-    plot.caption = element_text(margin = margin(t = 30)),
-    plot.title = element_text(hjust = 0.5), 
-    axis.title = element_blank()
-    panel.grid.major = element_line(linetype = "dashed"), 
-    panel.grid.minor = element_line(linetype = "blank"), 
-    axis.text.x = element_text(angle = 90, hjust = 1)) +
-coord_fixed()
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 2) +
+    scale_fill_gradient(low = "white", high = "steelblue") + 
+    labs(x = "Drug", y = "Drug", fill = "Pearson\nCorrelation") +
+    labs(caption = caption) +
+    ggtitle("Correlation Between Drug Consumption") +
+    theme(
+        plot.margin = unit(c(0,1,0,1), "cm"), 
+        plot.caption = element_text(margin = margin(t = 30)),
+        plot.title = element_text(hjust = 0.5), 
+        axis.title = element_blank()
+        panel.grid.major = element_line(linetype = "dashed"), 
+        panel.grid.minor = element_line(linetype = "blank"), 
+        axis.text.x = element_text(angle = 90, hjust = 1)) +
+    coord_fixed()
